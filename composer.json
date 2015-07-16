@@ -1,17 +1,17 @@
 {
-    "name": "lara-league/:package_name",
-    "description": ":package_description",
+    "name": "lara-league/laravue",
+    "description": "A reasonable starting point for making single page webapps",
     "keywords": [
         "league",
-        ":package_name"
+        "laravue"
     ],
-    "homepage": "https://github.com/lara-league/:package_name",
+    "homepage": "https://github.com/lara-league/laravue",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Russell Weas",
+            "email": "russweas@gmail.com",
+            "homepage": "rweas.me",
             "role": "Developer"
         }
     ],

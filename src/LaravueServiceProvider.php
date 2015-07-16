@@ -1,17 +1,17 @@
 <?php
 
-namespace LaraLeague\:PackageName;
+namespace LaraLeague\Laravue;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class PackageServiceProvider
  *
- * @package LaraLeague\:PackageName
+ * @package LaraLeague\Laravue
  * @see http://laravel.com/docs/5.1/packages#service-providers
  * @see http://laravel.com/docs/5.1/providers
  */
-class :PackageNameServiceProvider extends ServiceProvider
+class LaravueServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -39,15 +39,14 @@ class :PackageNameServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         $this->registerViews();
-        $this->registerMigrations();
-        $this->registerSeeds();
+        // $this->registerMigrations();
+        // $this->registerSeeds();
         $this->registerAssets();
-        $this->registerTranslations();
-        $this->registerConfigurations();
+        // $this->registerTranslations();
+        // $this->registerConfigurations();
 
-        if(! $this->app->routesAreCached() && config(':package_name.routes')) {
+        if(! $this->app->routesAreCached() && config('laravue.routes')) {
             $this->registerRoutes();
         }
     }
@@ -61,10 +60,10 @@ class :PackageNameServiceProvider extends ServiceProvider
     protected function registerViews()
     {
         // register views within the application with the set namespace
-        $this->loadViewsFrom($this->packagePath('resources/views'), ':package_name');
+        $this->loadViewsFrom($this->packagePath('resources/views'), 'laravue');
         // allow views to be published to the storage directory
         $this->publishes([
-            $this->packagePath('resources/views') => base_path('resources/views/lara-league/:package_name'),
+            $this->packagePath('resources/views') => base_path('resources/views/lara-league/laravue'),
         ], 'views');
     }
 
@@ -102,7 +101,7 @@ class :PackageNameServiceProvider extends ServiceProvider
     protected function registerAssets()
     {
         $this->publishes([
-            $this->packagePath('resources/assets') => public_path('lara-league/:package_name'),
+            $this->packagePath('resources/assets') => public_path('lara-league/laravue'),
         ], 'public');
     }
 
@@ -114,7 +113,7 @@ class :PackageNameServiceProvider extends ServiceProvider
      */
     protected function registerTranslations()
     {
-        $this->loadTranslationsFrom($this->packagePath('resources/lang'), ':package_name');
+        $this->loadTranslationsFrom($this->packagePath('resources/lang'), 'laravue');
     }
 
     /**
@@ -126,10 +125,10 @@ class :PackageNameServiceProvider extends ServiceProvider
     protected function registerConfigurations()
     {
         $this->mergeConfigFrom(
-            $this->packagePath('config/config.php'), ':package_name'
+            $this->packagePath('config/config.php'), 'laravue'
         );
         $this->publishes([
-            $this->packagePath('config/config.php') => config_path(':package_name.php'),
+            $this->packagePath('config/config.php') => config_path('laravue.php'),
         ], 'config');
     }
 
@@ -147,11 +146,10 @@ class :PackageNameServiceProvider extends ServiceProvider
             'namespace' => __NAMESPACE__
         ], function() {
             // index action showing the packages
-            $this->app['router']->any('/:package_name', [
-                'as'   => ':package_name:index',
-                'uses' => 'Controllers\:PackageNameController@index'
+            $this->app['router']->any('/laravue', [
+                'as'   => 'laravue:index',
+                'uses' => 'Controllers\LaravueController@index'
             ]);
-
         });
     }
 
