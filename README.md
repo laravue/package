@@ -26,7 +26,7 @@ For more about this implementation of front-end architecture, check out [this po
 Via Composer
 
 ``` bash
-$ composer require league/laravue
+$ composer require laravue/laravue
 ```
 
 ## Usage
