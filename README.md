@@ -62,12 +62,14 @@ Go into `components.coffee` and duplicate the last line under views. Replace the
 
 ## Roadmap
 - JWT Tokens.
+- Vue Router use.
 - Nocoffee Version.
 - Authentication API.
 - Better documentation site.
 - CLI for building views and components.
 - Symetrical API where a Vue model is binded to a Laravel controller.
 - Custom Elixir plugin to make this possible instead of npm scripts. `mix.laravue('app.js')`.
+- Vue ES7 syntax support so we can just do for example `class Home extends View ...` to get view functionality.
 - Async callback anonymous function for call method, basically "OK thing happened here's what I do now that it's done."
 
 ## Change log
