@@ -104,10 +104,10 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/thephpleague/laravue.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/league/laravue.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/league/laravue
+[link-packagist]: https://packagist.org/packages/laravue/laravue
 [link-travis]: https://travis-ci.org/thephpleague/laravue
 [link-scrutinizer]: https://scrutinizer-ci.com/g/thephpleague/laravue/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/thephpleague/laravue
-[link-downloads]: https://packagist.org/packages/league/laravue
+[link-downloads]: https://packagist.org/packages/laravue/laravue
 [link-author]: https://github.com/rweas
 [link-contributors]: ../../contributors
