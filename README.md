@@ -28,7 +28,7 @@ Via Composer
 ``` bash
 $ composer require laravue/laravue
 $ php artisan vendor:publish
-$ npm install coffee-script, coffeeify, stringify, vue
+$ npm install coffee-script coffeeify stringify vue
 $ browserify -v -t coffeeify -t stringify resources/assets/js/vendor/lara-league/laravue/example/app.js -o public/bundle.js
 ```
 
