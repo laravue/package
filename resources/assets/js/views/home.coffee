@@ -1,4 +1,4 @@
 module.exports =
-    ready: () -> require('../view-ready.coffee').call(this)
+    ready: () -> @app.laravue.viewReady.call this
     props: ['app']
-    template: require('./home.template.html')
+    template: require './home.template.html'

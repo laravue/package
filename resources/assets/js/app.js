@@ -11,7 +11,7 @@ new Vue({
         this.laravue.init.call(this, views)
     },
     data: {
-        laravue: require('./laravue.coffee')
+        laravue: require('./vendor/lara-league/laravue/laravue.coffee')
     },
     components: require('./components.coffee') // You can just inline them, but I recommend putting them in their own file
 })
