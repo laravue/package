@@ -27,9 +27,22 @@ Via Composer
 
 ``` bash
 $ composer require laravue/laravue
+$ php artisan vendor:publish
+$ npm install coffee-script, coffeeify, stringify, vue
+$ browserify -v -t coffeeify -t stringify resources/assets/js/vendor/lara-league/laravue/example/app.js -o public/bundle.js
 ```
 
 ## Usage
+### Compilation
+``` bash
+# To watch the file for changes
+$ watchify -v -t coffeeify -t stringify resources/assets/js/vendor/lara-league/laravue/example/app.js -o public/bundle.js
+
+# To run a one-time compilation
+$ browserify -v -t coffeeify -t stringify resources/assets/js/vendor/lara-league/laravue/example/app.js -o public/bundle.js
+```
+Replace the path to the example app file with the path to your own main file. Use the example I provided for inspiration.
+*Please note that when the Laravue Elixir plugin is released this process will be simpler.*
 
 ### Methods (on `laravue` object)
 #### `view(name)`
