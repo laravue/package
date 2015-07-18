@@ -46,6 +46,6 @@
                 <component is="@{{laravue.currentView}}" app="@{{@ laravue.app }}"></component>
             </div>
         </div>
-    <script src="/js/bundle.js"></script>
+    <script src="/bundle.js"></script>
 </body>
 </html>
